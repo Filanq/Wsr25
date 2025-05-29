@@ -1,0 +1,7 @@
+Django==4.2.13
+pillow
+djangorestframework
+setuptools
+django-extra-fields
+psycopg2
+mysqlclient
