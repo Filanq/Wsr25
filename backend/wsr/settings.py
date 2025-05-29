@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost']
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost",
+    "*",
 ]
 
 
