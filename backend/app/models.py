@@ -25,6 +25,7 @@ class User(AbstractBaseUser):
     login = models.CharField(max_length=250)
     password = models.CharField(max_length=250)
     services = models.CharField(max_length=500)
+    USERNAME_FIELD = 'login'
 
     class Meta:
         verbose_name_plural = 'Операторы'
