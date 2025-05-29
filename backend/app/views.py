@@ -291,11 +291,11 @@ def login(request):
     try:
         email = data['login']
     except KeyError:
-        return Response({"login": ["Введите логин."]}, 400)
+        return Response({"login": ["Введите логин."]}, 401)
     try:
         password = data['password']
     except KeyError:
-        return Response({"password": ["Введите пароль."]}, 400)
+        return Response({"password": ["Введите пароль."]}, 401)
 
     if User.objects.filter(login=login).exists():
         user = User.objects.get(login=login)
