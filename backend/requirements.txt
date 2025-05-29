@@ -5,3 +5,4 @@ setuptools
 django-extra-fields
 psycopg2
 mysqlclient
+django-cors-headers
