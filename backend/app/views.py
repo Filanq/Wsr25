@@ -75,7 +75,7 @@ def login(request):
 
     if User.objects.filter(login=login).exists():
         user = User.objects.get(login=login)
-        if check_password(password, user.password):
+        if password == user.password:
             if Token.objects.filter(user=user).exists():
                 Token.objects.get(user=user).delete()
             token = Token.objects.create(user=user)
