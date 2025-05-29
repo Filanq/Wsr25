@@ -42,8 +42,8 @@ class Records(AbstractBaseUser):
     link = models.CharField(max_length=250)
 
     class Meta:
-        verbose_name_plural = 'Операторы'
-        verbose_name = 'оператор'
+        verbose_name_plural = 'Талоны'
+        verbose_name = 'талон'
 
     def __str__(self):
         return self.login
