@@ -24,10 +24,11 @@ import re
 from urllib.parse import urlsplit
 from django.views.static import serve
 
-from app.views import (UsersList, login, logout)
+from app.views import (UsersList, login, logout, ServicesList)
 
 router = DefaultRouter()
 router.register('users', UsersList)
+router.register('services', ServicesList)
 
 urlpatterns = ([
     path('api/', include(router.urls)),
