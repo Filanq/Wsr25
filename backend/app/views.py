@@ -75,12 +75,13 @@ def login(request):
 
     if User.objects.filter(login=login).exists():
         user = User.objects.get(login=login)
+        print()
         if password == user.password:
             if Token.objects.filter(user=user).exists():
                 Token.objects.get(user=user).delete()
             token = Token.objects.create(user=user)
             return Response({"token": token.key}, 200)
-    return Response({"login": ["Неверные данные"]}, 400)
+    return Response({"login": ["Неверные данные", password, user.password]}, 400)
 
 
 @api_view(['POST'])
